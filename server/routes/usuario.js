@@ -42,6 +42,9 @@ app.get('/usuario', verificaToken, (req, res) => {
 
 });
 
+//================================
+//      Crear usuario
+//================================
 app.post('/usuario', [verificaToken, verificaAdmin_Role], function(req, res) {
 
     let body = req.body;
